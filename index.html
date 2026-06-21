@@ -1,0 +1,273 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bihar Kranti Dal</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #c40000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 40px;
+      margin-bottom: 8px;
+    }
+
+    nav {
+      background: #111;
+      padding: 12px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+      url("https://images.unsplash.com/photo-1524492412937-b28074a5d7da");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      background: #ffcc00;
+      color: #111;
+      padding: 12px 25px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      color: #c40000;
+      margin-bottom: 25px;
+      font-size: 32px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .card h3 {
+      color: #c40000;
+      margin-bottom: 10px;
+    }
+
+    .about, .vision {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      line-height: 1.7;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    }
+
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input, textarea, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background: #c40000;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+    }
+
+    @media(max-width: 600px) {
+      header h1 {
+        font-size: 30px;
+      }
+
+      .hero h2 {
+        font-size: 30px;
+      }
+
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Bihar Kranti Dal</h1>
+    <p>Naya Bihar, Nayi Soch, Nayi Kranti</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#agenda">Agenda</a>
+    <a href="#join">Join Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="hero" id="home">
+    <h2>बिहार के युवाओं की नई आवाज</h2>
+    <p>हमारा संकल्प — रोजगार, शिक्षा, किसान सम्मान और भ्रष्टाचार मुक्त बिहार</p>
+    <a href="#join" class="btn">Join the Movement</a>
+  </div>
+
+  <section id="about">
+    <h2>About Bihar Kranti Dal</h2>
+    <div class="about">
+      <p>
+        Bihar Kranti Dal is a people-focused political movement dedicated to building
+        a strong, educated, developed and corruption-free Bihar. Our aim is to empower
+        youth, support farmers, improve education, create employment opportunities and
+        bring transparent governance for every citizen.
+      </p>
+    </div>
+  </section>
+
+  <section id="agenda">
+    <h2>Our Main Agenda</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Youth Employment</h3>
+        <p>Creating job opportunities and skill development programs for Bihar's youth.</p>
+      </div>
+
+      <div class="card">
+        <h3>Education Reform</h3>
+        <p>Improving schools, colleges and digital education facilities across Bihar.</p>
+      </div>
+
+      <div class="card">
+        <h3>Farmer Support</h3>
+        <p>Fair price, irrigation support and modern farming facilities for farmers.</p>
+      </div>
+
+      <div class="card">
+        <h3>Women Safety</h3>
+        <p>Ensuring safety, education and empowerment for women in Bihar.</p>
+      </div>
+
+      <div class="card">
+        <h3>Anti-Corruption</h3>
+        <p>Transparent governance and strict action against corruption.</p>
+      </div>
+
+      <div class="card">
+        <h3>Development</h3>
+        <p>Better roads, healthcare, electricity, internet and infrastructure.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Our Vision</h2>
+    <div class="vision">
+      <p>
+        Our vision is to make Bihar a developed, self-reliant and respected state
+        where every young person gets opportunities, every farmer gets dignity,
+        every student gets quality education and every citizen gets justice.
+      </p>
+    </div>
+  </section>
+
+  <section id="join">
+    <h2>Join Bihar Kranti Dal</h2>
+    <form>
+      <input type="text" placeholder="Your Full Name" required />
+      <input type="text" placeholder="Your District" required />
+      <input type="tel" placeholder="Mobile Number" required />
+      <input type="email" placeholder="Email Address" />
+      <textarea rows="5" placeholder="Why do you want to join Bihar Kranti Dal?"></textarea>
+      <button type="submit">Submit Membership Form</button>
+    </form>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="about">
+      <p><strong>Email:</strong> biharkrantidal@example.com</p>
+      <p><strong>Phone:</strong> +91 XXXXX XXXXX</p>
+      <p><strong>Address:</strong> Bihar, India</p>
+      <p><strong>Social Media:</strong> Facebook | Instagram | X | YouTube</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Bihar Kranti Dal. All Rights Reserved.</p>
+    <p>Naya Bihar, Nayi Soch, Nayi Kranti</p>
+  </footer>
+
+</body>
+</html>
+```
