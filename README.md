@@ -1,16 +1,34 @@
-## Hi there 👋
+## Bihar Kranti Dal 🚩
+नया बिहार, नई सोच, नई क्रांति
 
-<!--
-**Biharkrantidal/Biharkrantidal** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Bihar Kranti Dal is a movement against corruption, paper leaks, unemployment, injustice, and a broken system.
 
-Here are some ideas to get you started:
+Inspired by the sacrifices of Shaheed Bhagat Singh, Shaheed Chandrashekhar Azad, and Shaheed Bharat Bhushan Tiwari, we stand for:
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Youth Empowerment
+Women's Safety
+Transparent Governance
+Quality Education
+Employment Generation
+Anti-Corruption Reforms
+Social Justice
+A Self-Reliant Bihar
+Our Vision
+
+To build a developed, educated, secure, and self-reliant Bihar where every citizen gets equal opportunity, dignity, and justice.
+
+Our Slogan
+"युवा जागेगा, बिहार बदलेगा"
+Founder
+
+Sarveshwar Pandey
+Founder & National President
+Bihar Kranti Dal
+
+Contact
+
+📧 Email: Biharkrantidal@gmail.com
+📱 Phone: +91 96317 04530
+📷 Instagram: @biharkrantidal
+
+Join the Movement. Build a New Bihar.
