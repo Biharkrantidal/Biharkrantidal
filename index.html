@@ -402,6 +402,46 @@
   color: #b00000;
   font-weight: bold;
 }
+
+    .founder-photo{
+  width:140px;
+  height:140px;
+  object-fit:cover;
+  border-radius:50%;
+  border:5px solid #ffcc00;
+  display:block;
+  margin:0 auto 20px;
+  box-shadow:
+      0 0 0 6px white,
+      0 0 0 10px #b00000,
+      0 15px 35px rgba(0,0,0,0.25);
+  transition:0.3s;
+}
+
+.founder-photo:hover{
+  transform:scale(1.05);
+}
+
+    .leader-frame{
+   width:180px;
+   height:180px;
+   margin:0 auto 25px;
+   padding:8px;
+   border-radius:50%;
+   background:linear-gradient(135deg,#ffcc00,#b00000,#ffcc00);
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   box-shadow:0 15px 35px rgba(0,0,0,0.25);
+}
+
+.founder-photo{
+   width:100%;
+   height:100%;
+   border-radius:50%;
+   object-fit:cover;
+   border:4px solid white;
+}
     
   </style>
 </head>
@@ -525,11 +565,30 @@
           यदि बिहार का युवा जाग गया, तो कोई भी भ्रष्ट व्यवस्था अधिक समय तक नहीं टिक सकती।
         </p>
 
-        <p class="founder-name">
-          Sarveshwar Pandey<br>
-          Founder & National President<br>
-          Bihar Kranti Dal
-        </p>
+        <div class="founder-signature">
+<!-- FOUNDER PROFILE  -->
+  <div class="leader-frame">
+   <img src="sarveshwar.jpg" alt="Sarveshwar Pandey" class="founder-photo">
+</div>
+
+  <div class="signature-line"></div>
+
+  <h3 class="founder-title">
+    Sarveshwar Pandey
+  </h3>
+
+  <div class="designation-badge">
+    Founder & National President
+  </div>
+
+  <p class="party-name">
+    Bihar Kranti Dal
+  </p>
+
+</div>
+
+
+        
       </div>
     </div>
   </section>
