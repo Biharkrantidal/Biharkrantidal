@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="hi">
 <head>
@@ -42,20 +43,14 @@
       align-items: center;
       gap: 12px;
     }
-    .logo-img { width: 65px; height: 65px; border-radius: 50%; object-fit: cover; border: 3px solid #ffcc00; background: white; }
 
-    .logo-icon {
-      width: 58px;
-      height: 58px;
+    .logo-img {
+      width: 65px;
+      height: 65px;
       border-radius: 50%;
-      background: #ffcc00;
-      color: #8b0000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px;
-      font-weight: 800;
-      border: 3px solid white;
+      object-fit: cover;
+      border: 3px solid #ffcc00;
+      background: white;
     }
 
     .logo h1 {
@@ -105,6 +100,11 @@
       max-width: 750px;
       position: relative;
       z-index: 2;
+    }
+
+    .hero-gap {
+      display: block;
+      height: 35px;
     }
 
     .hero h2 {
@@ -191,7 +191,17 @@
       max-width: 1100px;
       margin: auto;
     }
-    .map-shape { min-height: 210px; background: linear-gradient(rgba(139,0,0,0.85), rgba(139,0,0,0.85)), url("https://upload.wikimedia.org/wikipedia/commons/0/0f/Bihar_district_location_map.svg"); background-size: contain; background-repeat: no-repeat; background-position: center;
+
+    .map-shape {
+      min-height: 210px;
+      background:
+        linear-gradient(rgba(139,0,0,0.85), rgba(139,0,0,0.85)),
+        url("https://upload.wikimedia.org/wikipedia/commons/0/0f/Bihar_district_location_map.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
     .cards {
       max-width: 1150px;
       margin: auto;
@@ -374,10 +384,10 @@
   <section class="hero" id="home">
     <div class="hero-content">
       <h2>
-    युवा जागेगा,
-    <span class="hero-gap"></span>
-    बिहार बदलेगा
-</h2>
+        युवा जागेगा,
+        <span class="hero-gap"></span>
+        बिहार बदलेगा
+      </h2>
       <h3>भ्रष्ट सिस्टम के खिलाफ नई क्रांति</h3>
       <p>
         भ्रष्टाचार, पेपर लीक, बेरोजगारी और अन्याय के खिलाफ एक जनआंदोलन।
