@@ -191,15 +191,41 @@
       margin: auto;
     }
 
-    .map-shape {
-      min-height: 210px;
-      background:
-        linear-gradient(rgba(139,0,0,0.85), rgba(139,0,0,0.85)),
-        url("https://upload.wikimedia.org/wikipedia/commons/0/0f/Bihar_district_location_map.svg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
+    .flag-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.party-flag{
+    width:100%;
+    max-width:280px;
+    border-radius:20px;
+    background:white;
+    padding:12px;
+    box-shadow:
+      0 15px 35px rgba(0,0,0,0.15);
+    transition:0.4s;
+}
+
+.party-flag:hover{
+    transform:scale(1.05) rotate(-2deg);
+}
+
+    .party-flag{
+    width:100%;
+    max-width:320px;
+    animation: wave 4s ease-in-out infinite;
+    filter: drop-shadow(0 15px 20px rgba(0,0,0,0.2));
+}
+
+@keyframes wave{
+    0%{transform:rotate(0deg);}
+    25%{transform:rotate(-3deg);}
+    50%{transform:rotate(2deg);}
+    75%{transform:rotate(-2deg);}
+    100%{transform:rotate(0deg);}
+}
 
     .cards {
       max-width: 1150px;
@@ -487,7 +513,9 @@
   <section id="about">
     <h2 class="section-title">About Bihar Kranti Dal</h2>
     <div class="about-row">
-      <div class="map-shape"></div>
+      <div class="flag-container">
+    <img src="bkd-logo.png.png" alt="Bihar Kranti Dal Flag" class="party-flag">
+</div> 
       <div class="about-box">
         <p>
           Bihar Kranti Dal is a movement against corruption, paper leaks, unemployment,
