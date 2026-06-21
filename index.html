@@ -1,55 +1,81 @@
 ```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bihar Kranti Dal</title>
 
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Hind:wght@400;600;700&family=Poppins:wght@400;600;700;800&display=swap');
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      background: #f5f5f5;
-      color: #222;
+      background: #fff8ec;
+      color: #1d1d1d;
+      font-family: 'Poppins', 'Hind', sans-serif;
     }
 
     header {
-      background: #b00000;
+      background: linear-gradient(135deg, #7b0000, #c40000);
       color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 42px;
-      margin-bottom: 8px;
-    }
-
-    header p {
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    nav {
-      background: #111;
-      padding: 12px;
-      text-align: center;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 5px solid #ffcc00;
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 999;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #ffcc00;
+      color: #8b0000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      font-weight: 800;
+      border: 3px solid white;
+    }
+
+    .logo h1 {
+      font-size: 30px;
+      line-height: 1.1;
+      font-weight: 800;
+    }
+
+    .logo p {
+      font-size: 14px;
+      color: #ffeb99;
+      font-weight: 700;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 14px;
-      font-weight: bold;
+      margin-left: 24px;
+      font-weight: 700;
+      font-size: 15px;
     }
 
     nav a:hover {
@@ -57,59 +83,106 @@
     }
 
     .hero {
-      background:
-        linear-gradient(rgba(0,0,0,0.70), rgba(130,0,0,0.82)),
-        url("https://upload.wikimedia.org/wikipedia/commons/0/0f/Bihar_district_location_map.svg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      color: white;
-      text-align: center;
-      padding: 110px 20px;
-      min-height: 75vh;
+      min-height: 88vh;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      align-items: center;
+      padding: 70px 7%;
+      color: white;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,0.88), rgba(130,0,0,0.72), rgba(0,0,0,0.35)),
+        url("https://upload.wikimedia.org/wikipedia/commons/0/0f/Bihar_district_location_map.svg");
+      background-size: 48%;
+      background-repeat: no-repeat;
+      background-position: center right 8%;
       position: relative;
       overflow: hidden;
     }
-
-    .hero::after {
-      content: "✊ ✊ ✊ ✊ ✊";
-      position: absolute;
-      bottom: 20px;
-      left: 0;
-      width: 100%;
-      font-size: 45px;
-      letter-spacing: 25px;
-      opacity: 0.8;
+    
+    .hero-content {
+      max-width: 650px;
+      position: relative;
+      z-index: 2;
     }
 
     .hero h2 {
-      font-size: 55px;
-      margin-bottom: 15px;
-      font-weight: bold;
-      text-shadow: 2px 2px 5px black;
+      font-family: 'Hind', sans-serif;
+      font-size: 72px;
+      line-height: 1.05;
+      font-weight: 800;
+      color: #ffcc00;
+      text-shadow: 4px 4px 8px #000;
+      margin-bottom: 20px;
+    }
+
+    .hero h3 {
+      font-family: 'Hind', sans-serif;
+      font-size: 42px;
+      color: white;
+      margin-bottom: 18px;
+      text-shadow: 3px 3px 7px #000;
     }
 
     .hero p {
-      font-size: 22px;
-      margin: 0 auto 25px auto;
-      font-weight: bold;
-      max-width: 900px;
-      line-height: 1.6;
+      font-family: 'Hind', sans-serif;
+      font-size: 23px;
+      line-height: 1.7;
+      font-weight: 600;
+      margin-bottom: 28px;
+    }
+
+    .flag {
+      position: absolute;
+      right: 7%;
+      top: 18%;
+      width: 280px;
+      height: 170px;
+      background: linear-gradient(135deg, #c40000, #8b0000);
+      border: 5px solid #ffcc00;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.45);
+      transform: rotate(5deg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+      border-radius: 8px;
+    }
+
+    .flag::before {
+      content: "✊";
+      font-size: 46px;
+      background: #ffcc00;
+      color: #8b0000;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+
+    .flag strong {
+      font-family: 'Hind', sans-serif;
+      font-size: 28px;
+      color: #ffcc00;
+    }
+
+    .flag span {
+      font-size: 13px;
+      color: white;
+      font-weight: 700;
     }
 
     .btn {
-      background: #ffcc00;
+      background: linear-gradient(135deg, #ffcc00, #ff9900);
       color: #111;
-      padding: 13px 28px;
+      padding: 15px 34px;
+      border-radius: 50px;
       text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
+      font-weight: 800;
       display: inline-block;
-      width: fit-content;
-      margin: 0 auto;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
     }
 
     .btn:hover {
@@ -118,88 +191,145 @@
     }
 
     section {
-      padding: 50px 20px;
+      padding: 65px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #8b0000;
+      font-size: 38px;
+      font-weight: 800;
+      margin-bottom: 35px;
+    }
+
+    .section-title::after {
+      content: "";
+      width: 90px;
+      height: 5px;
+      background: #ffcc00;
+      display: block;
+      margin: 10px auto 0;
+      border-radius: 30px;
+    }
+
+    .about-box, .vision-box, .founder-box {
+      background: white;
+      border-radius: 18px;
+      padding: 36px;
+      max-width: 1100px;
+      margin: auto;
+      line-height: 1.9;
+      font-size: 18px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.11);
+      border: 1px solid #f1d8d8;
+    }
+
+    .about-row {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 35px;
+      align-items: center;
       max-width: 1100px;
       margin: auto;
     }
 
-    section h2 {
-      text-align: center;
-      color: #b00000;
-      margin-bottom: 25px;
-      font-size: 34px;
-    }
-
-    .about, .vision, .founder-box {
-      background: white;
-      border-radius: 10px;
-      padding: 30px;
-      line-height: 1.8;
-      box-shadow: 0 0 10px rgba(0,0,0,0.08);
-      font-size: 17px;
-    }
-
-    .founder-box {
-      border-left: 8px solid #b00000;
-      background: #fff7f7;
-    }
-
-    .founder-box p {
-      margin-bottom: 15px;
-    }
-
-    .founder-box strong {
-      color: #b00000;
-      font-size: 19px;
+    .map-shape {
+      min-height: 210px;
+      background:
+        linear-gradient(rgba(139,0,0,0.85), rgba(139,0,0,0.85)),
+        url("https://upload.wikimedia.org/wikipedia/commons/0/0f/Bihar_district_location_map.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
     .cards {
+      max-width: 1150px;
+      margin: auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 24px;
     }
 
     .card {
       background: white;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 30px;
+      border-radius: 18px;
       text-align: center;
-      border-top: 5px solid #b00000;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.11);
+      border-top: 6px solid #b00000;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card-icon {
+      font-size: 42px;
+      margin-bottom: 15px;
     }
 
     .card h3 {
-      color: #b00000;
-      margin-bottom: 10px;
+      color: #8b0000;
+      font-size: 22px;
+      margin-bottom: 12px;
     }
 
     .card p {
-      line-height: 1.6;
+      line-height: 1.7;
+      font-size: 16px;
     }
 
-    form {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      max-width: 600px;
+    .vision-founder {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 28px;
+      max-width: 1150px;
       margin: auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .founder-box {
+      border-left: 9px solid #b00000;
+      background: linear-gradient(135deg, #fff7f7, #fffdf0);
+    }
+
+    .founder-name {
+      margin-top: 25px;
+      color: #8b0000;
+      font-size: 24px;
+      font-weight: 800;
+    }
+
+    .join-contact {
+      display: grid;
+      grid-template-columns: 1.3fr 0.8fr;
+      gap: 28px;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    form, .contact-box {
+      background: white;
+      padding: 34px;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
     }
 
     input, textarea, button {
       width: 100%;
-      padding: 12px;
+      padding: 14px;
       margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+      border: 1px solid #ddd;
+      border-radius: 9px;
+      font-family: 'Poppins', 'Hind', sans-serif;
       font-size: 15px;
     }
 
     button {
-      background: #b00000;
+      background: linear-gradient(135deg, #b00000, #e00000);
       color: white;
-      font-size: 16px;
-      font-weight: bold;
+      font-weight: 800;
       cursor: pointer;
       border: none;
     }
@@ -208,53 +338,78 @@
       background: #800000;
     }
 
+    .contact-box h3 {
+      color: #8b0000;
+      font-size: 28px;
+      margin-bottom: 18px;
+    }
+
+    .contact-box p {
+      margin-bottom: 14px;
+      font-size: 17px;
+    }
+
     a {
-      color: #b00000;
-      font-weight: bold;
+      color: #8b0000;
+      font-weight: 700;
     }
 
     footer {
       background: #111;
       color: white;
+      padding: 30px 7%;
       text-align: center;
-      padding: 25px;
-      margin-top: 40px;
+      border-top: 5px solid #ffcc00;
     }
 
-    footer p {
-      margin: 5px 0;
-    }
-
-    @media(max-width: 600px) {
-      header h1 {
-        font-size: 30px;
+    @media(max-width: 850px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
       }
 
       nav a {
-        display: block;
-        margin: 10px 0;
+        display: inline-block;
+        margin: 7px 10px;
       }
 
       .hero {
-        padding: 80px 15px;
-        min-height: 70vh;
+        background-size: 90%;
+        background-position: center;
+        text-align: center;
+        padding: 90px 6%;
+      }
+
+      .hero-content {
+        margin: auto;
       }
 
       .hero h2 {
-        font-size: 32px;
+        font-size: 48px;
       }
 
-      .hero p {
-        font-size: 17px;
+      .hero h3 {
+        font-size: 30px;
+      }
+
+      .flag {
+        position: relative;
+        right: auto;
+        top: auto;
+        margin: 35px auto 0;
+        width: 240px;
+        height: 145px;
+      }
+
+      .about-row,
+      .vision-founder,
+      .join-contact {
+        grid-template-columns: 1fr;
       }
 
       .hero::after {
-        font-size: 28px;
+        font-size: 25px;
         letter-spacing: 8px;
-      }
-
-      section h2 {
-        font-size: 28px;
       }
     }
   </style>
@@ -263,158 +418,161 @@
 <body>
 
   <header>
-    <h1>Bihar Kranti Dal</h1>
-    <p>Naya Bihar, Nayi Soch, Nayi Kranti</p>
+    <div class="logo">
+      <div class="logo-icon">✊</div>
+      <div>
+        <h1>बिहार क्रांति दल</h1>
+        <p>नया बिहार, नई सोच, नई क्रांति</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#agenda">Agenda</a>
+      <a href="#vision">Vision</a>
+      <a href="#founder">Founder</a>
+      <a href="#join">Join Us</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#agenda">Agenda</a>
-    <a href="#vision">Vision</a>
-    <a href="#founder">Founder Message</a>
-    <a href="#join">Join Us</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h2>युवा जागेगा,<br>बिहार बदलेगा</h2>
+      <h3>भ्रष्ट सिस्टम के खिलाफ नई क्रांति</h3>
+      <p>
+        भ्रष्टाचार, पेपर लीक, बेरोजगारी और अन्याय के खिलाफ एक जनआंदोलन।
+        बिहार के स्वाभिमान, रोजगार, शिक्षा और सुरक्षा के लिए बिहार क्रांति दल।
+      </p>
+      <a href="#join" class="btn">Join the Movement</a>
+    </div>
 
-  <div class="hero" id="home">
-    <h2>युवा जागेगा, बिहार बदलेगा</h2>
-    <p>
-      भ्रष्टाचार, पेपर लीक, बेरोजगारी और अन्याय के खिलाफ एक जनआंदोलन।
-      बिहार के स्वाभिमान, रोजगार, शिक्षा और सुरक्षा के लिए बिहार क्रांति दल।
-    </p>
-    <a href="#join" class="btn">Join the Movement</a>
-  </div>
+    <div class="flag">
+      <strong>बिहार क्रांति दल</strong>
+      <span>नया बिहार, नई सोच, नई क्रांति</span>
+    </div>
+  </section>
 
   <section id="about">
-    <h2>About Bihar Kranti Dal</h2>
-    <div class="about">
-      <p>
-        Bihar Kranti Dal is a movement against corruption, paper leaks, unemployment,
-        injustice and the failure of the system. We stand for youth empowerment,
-        women's safety, transparent governance, quality education, job creation,
-        and a strong, self-reliant Bihar.
-      </p>
+    <h2 class="section-title">About Bihar Kranti Dal</h2>
+    <div class="about-row">
+      <div class="map-shape"></div>
+      <div class="about-box">
+        <p>
+          Bihar Kranti Dal is a movement against corruption, paper leaks, unemployment,
+          injustice and the failure of the system. We stand for youth empowerment,
+          women's safety, transparent governance, quality education, job creation,
+          and a strong, self-reliant Bihar.
+        </p>
+      </div>
     </div>
   </section>
 
   <section id="agenda">
-    <h2>Our Main Agenda</h2>
+    <h2 class="section-title">Our Main Agenda</h2>
+
     <div class="cards">
-
       <div class="card">
-        <h3>Youth Employment</h3>
-        <p>Jobs, skill development and real opportunities for Bihar's youth.</p>
+        <div class="card-icon">💼</div>
+        <h3>युवा रोजगार</h3>
+        <p>बिहार के युवाओं के लिए नौकरी, कौशल विकास और वास्तविक अवसर।</p>
       </div>
 
       <div class="card">
-        <h3>Stop Paper Leak</h3>
-        <p>Strict action against exam corruption and protection of students' future.</p>
+        <div class="card-icon">📄</div>
+        <h3>पेपर लीक बंद करो</h3>
+        <p>परीक्षा भ्रष्टाचार पर सख्त कार्रवाई और छात्रों के भविष्य की सुरक्षा।</p>
       </div>
 
       <div class="card">
-        <h3>Women Safety</h3>
-        <p>Safety, dignity and empowerment for every daughter and woman of Bihar.</p>
+        <div class="card-icon">👩</div>
+        <h3>महिला सुरक्षा</h3>
+        <p>हर बेटी और महिला की सुरक्षा, सम्मान और सशक्तिकरण।</p>
       </div>
 
       <div class="card">
-        <h3>Anti-Corruption</h3>
-        <p>Transparent governance and accountability from every public system.</p>
+        <div class="card-icon">🚫</div>
+        <h3>भ्रष्टाचार मुक्त शासन</h3>
+        <p>पारदर्शी शासन और हर सार्वजनिक व्यवस्था में जवाबदेही।</p>
       </div>
 
       <div class="card">
-        <h3>Education Reform</h3>
-        <p>Better schools, colleges, teachers and digital education facilities.</p>
+        <div class="card-icon">📚</div>
+        <h3>शिक्षा सुधार</h3>
+        <p>बेहतर स्कूल, कॉलेज, शिक्षक और डिजिटल शिक्षा सुविधाएं।</p>
       </div>
 
       <div class="card">
-        <h3>Development</h3>
-        <p>Better roads, hospitals, electricity, internet and infrastructure.</p>
+        <div class="card-icon">🏗️</div>
+        <h3>विकास</h3>
+        <p>बेहतर सड़क, अस्पताल, बिजली, इंटरनेट और बुनियादी ढांचा।</p>
       </div>
-
     </div>
   </section>
 
   <section id="vision">
-    <h2>Our Vision</h2>
-    <div class="vision">
-      <p>
-        Our vision is to make Bihar a developed, fearless, self-reliant and respected
-        state where youth get opportunities, women feel safe, farmers get dignity,
-        students get justice and every citizen lives with pride.
-      </p>
-    </div>
-  </section>
+    <div class="vision-founder">
+      <div class="vision-box">
+        <h2 class="section-title">Our Vision</h2>
+        <p>
+          Our vision is to make Bihar a developed, fearless, self-reliant and respected
+          state where youth get opportunities, women feel safe, farmers get dignity,
+          students get justice and every citizen lives with pride.
+        </p>
+      </div>
 
-  <section id="founder">
-    <h2>Message from the Founder</h2>
-    <div class="founder-box">
+      <div class="founder-box" id="founder">
+        <h2 class="section-title">Message from the Founder</h2>
+        <p>
+          My dear youth of Bihar, enough is enough. For too long, corruption, paper leaks,
+          unemployment and a broken system have crushed the dreams of hardworking students
+          and honest families.
+        </p>
 
-      <p>
-        My dear youth of Bihar, enough is enough. For too long, corruption, paper leaks,
-        unemployment and a broken system have crushed the dreams of hardworking students
-        and honest families.
-      </p>
-
-      <p>
-        Bihar Kranti Dal was born to challenge this failed system with courage,
-        discipline and unity. This movement belongs to every student, every unemployed
-        youth, every farmer, every woman and every citizen who refuses to stay silent.
-      </p>
-
-      <p>
-        We do not believe in fear. We believe in action. We do not accept injustice.
-        We demand accountability. We are inspired by the courage and sacrifice of
-        Shaheed Bhagat Singh, Shaheed Chandrashekhar Azad and Shaheed Bharat Bhushan Tiwari.
-      </p>
-
-      <p>
-        The time has come for Bihar's youth to rise, organize and build a new Bihar
-        with education, employment, safety, justice and self-respect.
-      </p>
-
-      <p>
-        <strong>
-          क्रांति किसी एक व्यक्ति से नहीं, जागरूक युवाओं की एकता से आती है।
+        <p>
+          बिहार की क्रांति किसी एक व्यक्ति से नहीं, जागरूक युवाओं की एकता से आएगी।
           यदि बिहार का युवा जाग गया, तो कोई भी भ्रष्ट व्यवस्था अधिक समय तक नहीं टिक सकती।
-        </strong>
-      </p>
+        </p>
 
-      <p> <strong> Sarveshwar Pandey<br> Founder & National President<br> Bihar Kranti Dal </strong> </p>
-
+        <p class="founder-name">
+          Sarveshwar Pandey<br>
+          Founder & National President<br>
+          Bihar Kranti Dal
+        </p>
+      </div>
     </div>
   </section>
 
   <section id="join">
-    <h2>Join Bihar Kranti Dal</h2>
-    <form>
-      <input type="text" placeholder="Your Full Name" required />
-      <input type="text" placeholder="Your District" required />
-      <input type="tel" placeholder="Mobile Number" required />
-      <input type="email" placeholder="Email Address" />
-      <textarea rows="5" placeholder="Why do you want to join Bihar Kranti Dal?"></textarea>
-      <button type="submit">Submit Membership Form</button>
-    </form>
-  </section>
+    <div class="join-contact">
+      <form>
+        <h2 class="section-title">Join Bihar Kranti Dal</h2>
+        <input type="text" placeholder="Your Full Name" required />
+        <input type="text" placeholder="Your District" required />
+        <input type="tel" placeholder="Mobile Number" required />
+        <input type="email" placeholder="Email Address" />
+        <textarea rows="5" placeholder="Why do you want to join Bihar Kranti Dal?"></textarea>
+        <button type="submit">Submit Membership Form</button>
+      </form>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <div class="about">
-      <p><strong>Email:</strong> Biharkrantidal@gmail.com</p>
-      <p><strong>Phone:</strong> +91 96317 04530</p>
-      <p><strong>Address:</strong> Bihar, India</p>
-      <p>
-        <strong>Instagram:</strong>
-        <a href="https://www.instagram.com/biharkrantidal/" target="_blank">
-          @biharkrantidal
-        </a>
-      </p>
+      <div class="contact-box">
+        <h3>Contact Us</h3>
+        <p><strong>Email:</strong> Biharkrantidal@gmail.com</p>
+        <p><strong>Phone:</strong> +91 96317 04530</p>
+        <p><strong>Address:</strong> Bihar, India</p>
+        <p>
+          <strong>Instagram:</strong>
+          <a href="https://www.instagram.com/biharkrantidal/" target="_blank">
+            @biharkrantidal
+          </a>
+        </p>
+      </div>
     </div>
   </section>
 
   <footer>
     <p>© 2026 Bihar Kranti Dal. All Rights Reserved.</p>
-    <p>Naya Bihar, Nayi Soch, Nayi Kranti</p>
+    <p>नया बिहार, नई सोच, नई क्रांति</p>
   </footer>
 
 </body>
