@@ -83,10 +83,7 @@
       padding: 70px 7%;
       color: white;
       background:
-        linear-gradient(
-          rgba(0,0,0,0.80),
-          rgba(120,0,0,0.70)
-        ),
+        linear-gradient(rgba(0,0,0,0.80), rgba(120,0,0,0.70)),
         url("hero-bg.jpg.png");
       background-size: cover;
       background-position: center;
@@ -94,7 +91,7 @@
       position: relative;
       overflow: hidden;
     }
-    
+
     .hero-content {
       max-width: 750px;
       position: relative;
@@ -141,6 +138,8 @@
       font-weight: 800;
       display: inline-block;
       box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+      border: none;
+      cursor: pointer;
     }
 
     .btn:hover {
@@ -170,16 +169,38 @@
       border-radius: 30px;
     }
 
-    .about-box, .vision-box, .founder-box {
+    .about-box,
+    .vision-box,
+    .ideals-box,
+    .founder-box,
+    .founder-profile-card,
+    .card,
+    .popup-content {
       background: white;
+      border-top: 6px solid #b00000;
       border-radius: 18px;
       padding: 36px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.11);
+      transition: 0.3s;
+    }
+
+    .about-box:hover,
+    .vision-box:hover,
+    .ideals-box:hover,
+    .founder-box:hover,
+    .founder-profile-card:hover,
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .about-box,
+    .vision-box,
+    .founder-box,
+    .ideals-box {
       max-width: 1100px;
       margin: auto;
       line-height: 1.9;
       font-size: 18px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.11);
-      border: 1px solid #f1d8d8;
     }
 
     .about-row {
@@ -191,41 +212,36 @@
       margin: auto;
     }
 
-    .flag-container{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
+    .flag-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-.flag-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    .party-flag {
+      width: 230px;
+      height: 230px;
+      object-fit: contain;
+      background: white;
+      padding: 12px;
+      border-radius: 18px;
+      border-top: 6px solid #b00000;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.11);
+      animation: wave 4s ease-in-out infinite;
+      transition: 0.3s;
+    }
 
-.party-flag {
-  width: 230px;
-  height: 230px;
-  object-fit: contain;
-  background: white;
-  padding: 12px;
-  border-radius: 22px;
-  border: 4px solid #ffcc00;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.18);
-  animation: wave 4s ease-in-out infinite;
-}
+    .party-flag:hover {
+      transform: scale(1.05);
+    }
 
-.party-flag:hover {
-  transform: scale(1.05);
-}
-
-@keyframes wave{
-    0%{transform:rotate(0deg);}
-    25%{transform:rotate(-3deg);}
-    50%{transform:rotate(2deg);}
-    75%{transform:rotate(-2deg);}
-    100%{transform:rotate(0deg);}
-}
+    @keyframes wave {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(-3deg); }
+      50% { transform: rotate(2deg); }
+      75% { transform: rotate(-2deg); }
+      100% { transform: rotate(0deg); }
+    }
 
     .cards {
       max-width: 1150px;
@@ -236,17 +252,7 @@
     }
 
     .card {
-      background: white;
-      padding: 30px;
-      border-radius: 18px;
       text-align: center;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.11);
-      border-top: 6px solid #b00000;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
     }
 
     .card-icon {
@@ -266,16 +272,15 @@
     }
 
     .vision-founder {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  max-width: 1000px;
-  margin: auto;
-}
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
 
     .founder-box {
-      border-left: 9px solid #b00000;
-      background: linear-gradient(135deg, #fff7f7, #fffdf0);
+      background: white;
     }
 
     .founder-name {
@@ -285,41 +290,99 @@
       font-weight: 800;
     }
 
-    .join-contact {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-    form, .contact-box {
-      background: white;
-      padding: 34px;
-      border-radius: 18px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-    }
-
-    input, textarea, button {
+    .ideal-image {
       width: 100%;
-      padding: 14px;
-      margin: 10px 0;
-      border: 1px solid #ddd;
-      border-radius: 9px;
-      font-family: 'Poppins', 'Hind', sans-serif;
-      font-size: 15px;
+      max-width: 650px;
+      border-radius: 18px;
+      border-top: 6px solid #b00000;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+      transition: 0.4s;
+      margin-bottom: 25px;
     }
 
-    button {
-      background: linear-gradient(135deg, #b00000, #e00000);
-      color: white;
+    .ideal-image:hover {
+      transform: scale(1.03);
+    }
+
+    .ideals-heading {
+      margin-top: 25px;
+      color: #8b0000;
+      font-size: 30px;
       font-weight: 800;
-      cursor: pointer;
-      border: none;
     }
 
-    button:hover {
-      background: #800000;
+    .ideals-text {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 1.9;
+    }
+
+    .founder-profile-card {
+      margin: 45px auto 0;
+      max-width: 520px;
+      text-align: center;
+    }
+
+    .founder-photo-wrap {
+      width: 210px;
+      height: 210px;
+      margin: 0 auto 22px;
+      padding: 10px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #b00000, #ffcc00, #b00000);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    }
+
+    .founder-profile-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid white;
+    }
+
+    .founder-divider {
+      color: #c58b00;
+      letter-spacing: 8px;
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .founder-profile-name {
+      font-size: 36px;
+      color: #8b0000;
+      font-weight: 800;
+      margin-bottom: 18px;
+      text-shadow: 1px 2px 0 #ffcc00;
+    }
+
+    .founder-profession {
+      margin-top: -10px;
+      margin-bottom: 18px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #b00000;
+      letter-spacing: 1px;
+    }
+
+    .founder-profile-badge {
+      background: linear-gradient(135deg, #8b0000, #c40000);
+      color: white;
+      padding: 13px 22px;
+      border-radius: 40px;
+      margin: 12px auto;
+      font-size: 18px;
+      font-weight: 800;
+      border: 3px solid #ffcc00;
+      box-shadow: 0 8px 20px rgba(176,0,0,0.25);
+    }
+
+    .join-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 1000px;
+      margin: auto;
     }
 
     .contact-box h3 {
@@ -337,35 +400,46 @@
       color: #8b0000;
       font-weight: 700;
     }
-```css
-.vision-box{
-  background: linear-gradient(135deg,#fffdf5,#fff3d6);
-  border:2px solid #ffcc00;
-  border-radius:25px;
-  padding:45px;
-  box-shadow:0 18px 40px rgba(0,0,0,0.15);
-}
 
-.ideals-box{
-  background:linear-gradient(135deg,#fff7f7,#fffef5);
-  padding:45px;
-  border-radius:25px;
-  border:2px solid #ffcc00;
-  box-shadow:0 18px 45px rgba(0,0,0,0.15);
-}
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
 
-.ideal-image{
-  width:100%;
-  max-width:650px;
-  border-radius:20px;
-  border:5px solid #ffcc00;
-  box-shadow:0 15px 35px rgba(0,0,0,0.25);
-  transition:0.4s;
-}
+    .popup-content {
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+      position: relative;
+    }
 
-.ideal-image:hover{
-  transform:scale(1.03);
-}
+    .popup-content h2 {
+      color: #8b0000;
+      margin-bottom: 20px;
+    }
+
+    .popup-content p {
+      margin: 12px 0;
+      font-size: 17px;
+    }
+
+    .close-btn {
+      position: absolute;
+      right: 20px;
+      top: 10px;
+      font-size: 32px;
+      cursor: pointer;
+      color: #b00000;
+      font-weight: bold;
+    }
 
     footer {
       background: #111;
@@ -373,6 +447,11 @@
       padding: 30px 7%;
       text-align: center;
       border-top: 5px solid #ffcc00;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 5px 0;
     }
 
     @media(max-width: 850px) {
@@ -405,155 +484,11 @@
         font-size: 30px;
       }
 
-      .about-row,
-      .vision-founder,
-      .join-contact {
+      .about-row {
         grid-template-columns: 1fr;
       }
     }
-
-/* Contact Popup */
-
-.popup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.7);
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-.popup-content {
-  background: white;
-  width: 90%;
-  max-width: 500px;
-  padding: 35px;
-  border-radius: 20px;
-  text-align: center;
-  position: relative;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-}
-
-.popup-content h2 {
-  color: #8b0000;
-  margin-bottom: 20px;
-}
-
-.popup-content p {
-  margin: 12px 0;
-  font-size: 17px;
-}
-
-.close-btn {
-  position: absolute;
-  right: 20px;
-  top: 10px;
-  font-size: 32px;
-  cursor: pointer;
-  color: #b00000;
-  font-weight: bold;
-}
-
-  
-
-.founder-photo:hover{
-  transform:scale(1.05);
-}
-
-    .leader-frame{
-   width:180px;
-   height:180px;
-   margin:0 auto 25px;
-   padding:8px;
-   border-radius:50%;
-   background:linear-gradient(135deg,#ffcc00,#b00000,#ffcc00);
-   display:flex;
-   align-items:center;
-   justify-content:center;
-   box-shadow:0 15px 35px rgba(0,0,0,0.25);
-}
-
-.founder-photo{
-   width:100%;
-   height:100%;
-   border-radius:50%;
-   object-fit:cover;
-   border:4px solid white;
-}
-
-    .founder-profile-card{
-  margin:45px 0 0 auto;
-  max-width:520px;
-  text-align:center;
-  padding:35px 30px;
-  border-radius:35px;
-  background:linear-gradient(135deg,#fffdf5,#fff3d6);
-  border:2px solid #b00000;
-  box-shadow:0 18px 45px rgba(0,0,0,0.18);
-  position:relative;
-}
-
-.founder-photo-wrap{
-  width:210px;
-  height:210px;
-  margin:0 auto 22px;
-  padding:10px;
-  border-radius:50%;
-  background:linear-gradient(135deg,#b00000,#ffcc00,#b00000);
-  box-shadow:0 15px 35px rgba(0,0,0,0.25);
-}
-
-.founder-profile-img{
-  width:100%;
-  height:100%;
-  border-radius:50%;
-  object-fit:cover;
-  border:6px solid white;
-}
-
-.founder-divider{
-  color:#c58b00;
-  letter-spacing:8px;
-  font-size:18px;
-  margin:10px 0;
-}
-
-.founder-profile-name{
-  font-size:36px;
-  color:#8b0000;
-  font-weight:800;
-  margin-bottom:18px;
-  text-shadow:1px 2px 0 #ffcc00;
-}
-
-.founder-profile-badge{
-  background:linear-gradient(135deg,#8b0000,#c40000);
-  color:white;
-  padding:13px 22px;
-  border-radius:40px;
-  margin:12px auto;
-  font-size:18px;
-  font-weight:800;
-  border:3px solid #ffcc00;
-  box-shadow:0 8px 20px rgba(176,0,0,0.25);
-}
-
-    .founder-profession{
-  margin-top:-10px;
-  margin-bottom:18px;
-  font-size:18px;
-  font-weight:700;
-  color:#b00000;
-  letter-spacing:1px;
-}
-    
   </style>
-
-  
 </head>
 
 <body>
@@ -572,6 +507,7 @@
       <a href="#about">About</a>
       <a href="#agenda">Agenda</a>
       <a href="#vision">Vision</a>
+      <a href="#ideals">Ideals</a>
       <a href="#founder">Founder</a>
       <a href="#join">Join Us</a>
       <a href="#" onclick="openContactPopup()">Contact Us</a>
@@ -598,8 +534,9 @@
     <h2 class="section-title">About Bihar Kranti Dal</h2>
     <div class="about-row">
       <div class="flag-container">
-    <img src="bkd-logo.png.png" alt="Bihar Kranti Dal Flag" class="party-flag">
-</div> 
+        <img src="bkd-logo.png.png" alt="Bihar Kranti Dal Flag" class="party-flag">
+      </div>
+
       <div class="about-box">
         <p>
           Bihar Kranti Dal is a movement against corruption, paper leaks, unemployment,
@@ -654,162 +591,144 @@
   </section>
 
   <section id="vision">
-    <div class="vision-founder">
-      <div class="vision-box">
-        <h2 class="section-title">Our Vision</h2>
-        <p>
-          Our vision is to make Bihar a developed, fearless, self-reliant and respected
-          state where youth get opportunities, women feel safe, farmers get dignity,
-          students get justice and every citizen lives with pride.
-        </p>
-      </div>
-</section>
-<!-- ideals PROFILE  -->
-<section id="ideals">
-  <h2 class="section-title">Our Ideals</h2>
+    <div class="vision-box">
+      <h2 class="section-title">Our Vision</h2>
+      <p>
+        Our vision is to make Bihar a developed, fearless, self-reliant and respected
+        state where youth get opportunities, women feel safe, farmers get dignity,
+        students get justice and every citizen lives with pride.
+      </p>
+    </div>
+  </section>
 
-  <div class="ideals-box" style="text-align:center;">
+  <section id="ideals">
+    <h2 class="section-title">Our Ideals</h2>
 
-    <img src="bhagat singh (2).png"
-         alt="Bhagat Singh and Chandrashekhar Azad"
-         class="ideal-image">
+    <div class="ideals-box" style="text-align:center;">
+      <img src="bhagat singh (2).png"
+           alt="Bhagat Singh and Chandrashekhar Azad"
+           class="ideal-image">
 
-    <h3 style="margin-top:25px; color:#8b0000;">
-      Shaheed Bhagat Singh & Shaheed Chandrashekhar Azad
-    </h3>
+      <h3 class="ideals-heading">
+        Shaheed Bhagat Singh & Shaheed Chandrashekhar Azad
+      </h3>
 
-    <p style="margin-top:20px; font-size:18px; line-height:1.9;">
-      Bihar Kranti Dal draws inspiration from the courage, sacrifice,
-      patriotism and unwavering commitment of Shaheed Bhagat Singh and
-      Shaheed Chandrashekhar Azad.
+      <p class="ideals-text">
+        Bihar Kranti Dal draws inspiration from the courage, sacrifice,
+        patriotism and unwavering commitment of Shaheed Bhagat Singh and
+        Shaheed Chandrashekhar Azad.
+        <br><br>
+        They dedicated their lives to fighting injustice, oppression and
+        corruption while dreaming of a strong, self-reliant and fearless India.
+        <br><br>
+        Their determination, discipline and spirit of public service continue
+        to inspire our mission for a developed, educated and corruption-free Bihar.
+        <br><br>
+        We believe that the youth of Bihar can bring meaningful change by
+        following the values of courage, integrity, sacrifice and nation-building
+        exemplified by these great revolutionaries.
+      </p>
+    </div>
+  </section>
 
-      They dedicated their lives to fighting injustice, oppression and
-      corruption while dreaming of a strong, self-reliant and fearless India.
+  <section id="founder">
+    <div class="founder-box">
+      <h2 class="section-title">Message from the Founder</h2>
 
-      Their determination, discipline and spirit of public service continue
-      to inspire our mission for a developed, educated and corruption-free Bihar.
+      <p>
+        My dear youth of Bihar, enough is enough. For too long, corruption, paper leaks,
+        unemployment and a broken system have crushed the dreams of hardworking students
+        and honest families.
+      </p>
 
-      We believe that the youth of Bihar can bring meaningful change by
-      following the values of courage, integrity, sacrifice and nation-building
-      exemplified by these great revolutionaries.
-    </p>
+      <p>
+        बिहार की क्रांति किसी एक व्यक्ति से नहीं, जागरूक युवाओं की एकता से आएगी।
+        यदि बिहार का युवा जाग गया, तो कोई भी भ्रष्ट व्यवस्था अधिक समय तक नहीं टिक सकती।
+      </p>
 
-  </div>
-</section>
+      <div class="founder-profile-card">
+        <div class="founder-photo-wrap">
+          <img src="Bihar kranti dal founder.png" alt="Sarveshwar Pandey" class="founder-profile-img">
+        </div>
 
-      
-      <div class="founder-box" id="founder">
-        <h2 class="section-title">Message from the Founder</h2>
-        <p>
-          My dear youth of Bihar, enough is enough. For too long, corruption, paper leaks,
-          unemployment and a broken system have crushed the dreams of hardworking students
-          and honest families.
-        </p>
+        <div class="founder-divider">★★★</div>
 
-        <p>
-          बिहार की क्रांति किसी एक व्यक्ति से नहीं, जागरूक युवाओं की एकता से आएगी।
-          यदि बिहार का युवा जाग गया, तो कोई भी भ्रष्ट व्यवस्था अधिक समय तक नहीं टिक सकती।
-        </p>
-        
-<!-- FOUNDER PROFILE  -->
-<div class="founder-profile-card">
+        <h3 class="founder-profile-name">Sarveshwar Pandey</h3>
 
-  <div class="founder-photo-wrap">
-    <img src="Bihar kranti dal founder.png" alt="Sarveshwar Pandey" class="founder-profile-img">
-  </div>
+        <p class="founder-profession">(Data Scientist)</p>
 
-  <div class="founder-divider">★★★</div>
+        <div class="founder-profile-badge">
+          👤 Founder & National President
+        </div>
 
-  <h3 class="founder-profile-name">Sarveshwar Pandey</h3> 
-  
-  <p class="founder-profession">
-  (Data Scientist)
-</p>
-
-  <div class="founder-profile-badge">
-    👤 Founder & National President
-  </div>
-
-  <div class="founder-profile-badge">
-    🚩 Bihar Kranti Dal
-  </div>
-
-</div> 
-
-
-        
+        <div class="founder-profile-badge">
+          🚩 Bihar Kranti Dal
+        </div>
       </div>
     </div>
   </section>
 
-<section id="join">
-  <div class="join-contact">
+  <section id="join">
+    <div class="join-contact">
+      <div class="about-box" style="text-align:center;">
+        <h2 class="section-title">Join Bihar Kranti Dal</h2>
 
-    <!-- Membership Section -->
-    <div class="about-box" style="text-align:center;">
-      <h2 class="section-title">Join Bihar Kranti Dal</h2>
+        <p>
+          Become a part of Bihar's movement against corruption,
+          paper leaks, unemployment and injustice.
+        </p>
+
+        <br>
+
+        <a href="https://forms.gle/UuonY8KkV4bqYrL88"
+           target="_blank"
+           class="btn">
+           Fill Membership Form
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div id="contactPopup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closeContactPopup()">&times;</span>
+
+      <h2>Contact Us</h2>
+
+      <p><strong>Email:</strong> Biharkrantidal@gmail.com</p>
+      <p><strong>Phone:</strong> +91 96317 04530</p>
+      <p><strong>Address:</strong> Bihar, India</p>
 
       <p>
-        Become a part of Bihar's movement against corruption,
-        paper leaks, unemployment and injustice.
+        <strong>Instagram:</strong>
+        <a href="https://www.instagram.com/biharkrantidal/" target="_blank">
+          @biharkrantidal
+        </a>
       </p>
-
-      <br>
-
-      <a href="https://forms.gle/UuonY8KkV4bqYrL88"
-         target="_blank"
-         class="btn">
-         Fill Membership Form
-      </a>
     </div>
-
-    <!-- Contact Section --> 
-<div id="contactPopup" class="popup">
-  <div class="popup-content">
-    <span class="close-btn" onclick="closeContactPopup()">&times;</span>
-
-    <h2>Contact Us</h2>
-
-    <p><strong>Email:</strong> Biharkrantidal@gmail.com</p>
-
-    <p><strong>Phone:</strong> +91 96317 04530</p>
-
-    <p><strong>Address:</strong> Bihar, India</p>
-
-    <p>
-      <strong>Instagram:</strong>
-      <a href="https://www.instagram.com/biharkrantidal/" target="_blank">
-        @biharkrantidal
-      </a>
-    </p>
   </div>
-</div>
-
-<script>
-function openContactPopup() {
-  document.getElementById("contactPopup").style.display = "flex";
-}
-
-function closeContactPopup() {
-  document.getElementById("contactPopup").style.display = "none";
-}
-
-window.onclick = function(event) {
-  const popup = document.getElementById("contactPopup");
-  if (event.target === popup) {
-    popup.style.display = "none";
-  }
-}
-</script>
-
-  </div>
-</section>
 
   <footer>
     <p>© 2026 Bihar Kranti Dal. All Rights Reserved.</p>
     <p>नया बिहार, नई सोच, नई क्रांति</p>
   </footer>
 
+  <script>
+    function openContactPopup() {
+      document.getElementById("contactPopup").style.display = "flex";
+    }
+
+    function closeContactPopup() {
+      document.getElementById("contactPopup").style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      const popup = document.getElementById("contactPopup");
+      if (event.target === popup) {
+        popup.style.display = "none";
+      }
+    }
+  </script>
+
 </body>
 </html>
-
